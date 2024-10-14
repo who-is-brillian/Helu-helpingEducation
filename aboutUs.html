@@ -12,32 +12,50 @@
     <title>About Us HELU</title>
     <style>
         .parallax {
-            background-image: url('img/banner AboutUs.png') ;
-            height: 500px;
-            background-attachment: fixed; 
-            background-position: 70% 30%; 
-            background-repeat: no-repeat; 
+            background-image: url('img/banner AboutUs.png');
+            height: 70vh;
+            background-attachment: fixed;
+            background-position: 70% 30%;
+            background-repeat: no-repeat;
             background-size: contain;
         }
 
-        @media only screen and (max-width: 680px) {
-            .parallax{
-                height: 300px;
-                background-size: contain;
-                background-position: 70% 15%;  
+                
+        @media only screen and (max-width: 1200px) {
+            .parallax {
+                height: 50vh;  
+                background-position: 70% 20%;
             }
-            .nav-text{
+            .img-visi-misi {
+                display: block;
+                width: 50%;
+                margin: auto;
+            }
+            #aboutSection{
+                flex-direction: column;
+            }
+            #aboutSection .article-about{
+                margin-top: 20px;
+            }
+        }
+        
+        @media only screen and (max-width: 600px) {
+            .parallax {
+                height: 40vh; /* Atur ulang ketinggian untuk layar kecil */
+                background-attachment: scroll;
+                background-position: contain; 
+                background-position: 70% 70%;
+
+            }
+            .nav-text {
+                display: none;
+            }
+            .img-visi-misi {
                 display: none;
             }
         }
 
-        @media only screen and (max-width: 1200px) {
-            .parallax{
-                height: 300px;
-                background-size: contain;
-                background-position: 70% 10%;  
-            }
-        }
+        
     </style>
 </head>
 
@@ -81,11 +99,11 @@
         <!-- About Helu -->
        <section class="mt-5" >
            <h1 class="text-center my-5 fw-bolder color-medium-dark">About <span class="color-dark">HELU</span></h1>
-        <div class="row d-flex justify-content-center align-items-center" >
-            <div class="col-12 col-md-4">
+        <div id="aboutSection" class="row d-flex justify-content-center align-items-center" >
+            <div class="col-12 col-md-10 col-lg-5">
                 <img src="img/AboutDummy.jpg" id="logoAbout" class="img-fluid" alt="Logo Helu">
             </div>
-            <div class="col-12 col-md-7">
+            <div class="article-about col-12 col-md-12 col-lg-6">
                 <div
                     id="aboutCard" class=" card-body d-flex flex-column align-items-centercolor-dark">
                     <p class="lh-sm text-justify fs-6">
@@ -120,14 +138,14 @@
 
 
     <!-- Visi misi -->
-    <section class="container my-5">
+    <section class="my-5 d-flex flex-column gap-5">
         <!-- Visi -->
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <section class="custom-box bg-dark1 text-center p-3 rounded-top color-medium-light"> 
                     <h2> Visi HELU </h2> 
                 </section>
-                <article id="visiHelu" class="custom-box px-4 py-5 rounded-bottom-3 bg-medium-dark color-dark mt-2  fs-6">
+                <article id="visiHelu" class="custom-box px-2 py-5 rounded-bottom-3 bg-medium-dark color-dark mt-2  fs-6">
                     <p>Menjadi platform pembelajaran bahasa Inggris terdepan yang inovatif dan inklusif, membantu siswa
                         SMA/SMK mengembangkan keterampilan bahasa Inggris secara efektif, serta mempersiapkan mereka
                         untuk
@@ -136,7 +154,7 @@
                 </article>
             </div>
             <div class="col-lg-6">
-                <img src="img/people.png" alt="imageVector" class="img-fluid">
+                <img src="img/people.png" alt="imageVector" class="img-visi-misi img-fluid">
             </div>
         </div>
         <!-- Misi -->
@@ -157,11 +175,10 @@
                 </ul>
             </article>
         </div>
-        </div>
     </section>
     <!-- Crousel OurTeam -->
-    <div id="carouselExampleRide" class="carousel slide" data-bs-ride="carousel" style="margin: 100px;">
-        <h1 class="text-center mb-5">Our Team</h1>
+    <section id="carouselExampleRide" class="carousel slide" data-bs-ride="carousel" >
+        <h1 class="text-center my-5 fw-bolder color-medium-dark">Our<span class="color-dark">Team</span></h1>
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <div class="row">
@@ -281,7 +298,7 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-    </div>
+    </section>
 </main>
     <!-- About Us End -->
 
@@ -331,7 +348,6 @@
               </div>
               <!-- Akhir Kolom 3 -->
           </div>
-          <!-- Akhir bagian grid (row) Bootstrap -->
       </div>
   </footer>
 
