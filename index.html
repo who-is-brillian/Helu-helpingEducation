@@ -10,6 +10,9 @@
     <title>HELU</title>
     
     <style>
+    .counter{
+      width: 200px;
+    }
       /* Parallax effect */
     .parallax-section {
       height: 100vh;
@@ -35,13 +38,28 @@
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     }
 
+    @media only screen and (max-width: 1200px) {
+      .counter{
+        width: 150px;
+      }
+    }
+
+    @media only screen and (max-width: 600px) {
+      .nav-text{
+        display: none
+      }
+      .counter{
+        width: 100px;
+      }
+    }
+
     </style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg bg-medium-dark fixed-top px-5 py-2 border-bottom border-2 border-dark ">
+  <nav class="navbar navbar-expand-lg bg-medium-dark fixed-top px-3 py-2 border-bottom border-2 border-dark ">
     <div class="container-fluid">
       <img src="img/logoHelu.png" alt="Logo" width="70" class="d-inline-block align-text-top">
-      <h1 class="fs-3 fw-bolder color-dark">Helping Education</h1>
+      <h1 class="nav-text fs-3 fw-bolder color-dark">Helping Education</h1>
       <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -109,16 +127,16 @@
 
  <!-- Graduates Count Section, positioned in the middle of the carousel -->
  <div class="position-absolute top-100 start-50 translate-middle text-center z-3 d-flex gap-2">
-  <div class="bg-medium-dark color-light px-5 rounded-3 shadow">
-    <p class="mb-0">Students</p>
+  <div class="counter bg-medium-dark color-light rounded-3 shadow">
+    <p class="fw-bold mb-0">Students</p>
     <h6 id="counter1" class="display-4">0</h6>
   </div>
-  <div class="bg-medium-dark color-light px-5 rounded-3 shadow">
-    <p class="mb-0">Mentor</p>
+  <div class="counter bg-medium-dark color-light rounded-3 shadow">
+    <p class="fw-bold mb-0">Mentor</p>
     <h6 id="counter2" class="display-4">0</h6>
   </div>
-  <div class="bg-medium-dark color-light px-5 rounded-3 shadow">
-    <p class="mb-0">Class</p>
+  <div class="counter bg-medium-dark color-light rounded-3 shadow">
+    <p class="fw-bold mb-0">Class</p>
     <h6 id="counter3" class="display-4">0</h6>
   </div>
 </div>
@@ -280,6 +298,41 @@
 
 <!-- Price List End -->
 
+<!-- Discount Section -->
+<div class="container my-5">
+  <div class="p-5 bg-light color-dark rounded shadow-lg row gap-3 align-items-center" style="background: linear-gradient(135deg, #7C93C3, #d8c4b6);">
+    <div class="col-12 col-lg-6">
+      <h2 class="display-1 fw-bolder">Diskon Kelas</h2>
+      <p class="lead font-weight-bold">Pilih kelas Grammar dan kelas TOEFL Preparation dapatkan <span class="text-danger">diskon 20%</span></p>
+      <p class="text-muted mb-4">Tawaran terbatas!</p>
+      <ul class="list-unstyled">
+        <li class="mb-2">
+          <i class="bi bi-check-circle-fill text-success"></i> Akses penuh ke semua materi
+        </li>
+        <li class="mb-2">
+          <i class="bi bi-check-circle-fill text-success"></i> Forum diskusi dengan pengajar
+        </li>
+        <li class="mb-2">
+          <i class="bi bi-check-circle-fill text-success"></i> Sertifikat penyelesaian
+        </li>
+        <li class="mb-2">
+          <i class="bi bi-check-circle-fill text-success"></i> Update materi secara berkala
+        </li>
+        <li class="mb-2">
+          <i class="bi bi-check-circle-fill text-success"></i> Bantuan 24/7 dari tim support
+        </li>
+      </ul>
+      <a href="#" class="btn bg-medium-light btn-sm mt-4 p-3 font-weight-bold" style="border-radius: 50px;">Daftar Sekarang →</a>
+    </div>
+      <div class="col-12 col-lg-5 text-center">
+        <p class="fs-3">Diskon berakhir dalam:</p>
+        <div id="countdown" class="display-1 text-center"> <p></p></div>
+      </div>
+  </div>
+</div>
+
+ <!-- Discount End -->
+
 <!-- Our Mentors -->
 <section id="mentors" class="py-5 bg-medium-light">
   <div class="container">
@@ -371,7 +424,7 @@
 
 <!-- Our Mentors end -->
 
-<div id="carouselExampleIndicators" class="carousel carousel-dark slide">
+<section id="carouselExampleIndicators" class="carousel carousel-dark slide">
   <h2 class="text-center fw-bold mt-5">What Our <span class="color-medium-dark">Customer Says</span></h2>
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -380,7 +433,7 @@
   </div>
   <div class="carousel-inner p-5">
     <!-- halaman pertama testimoni -->
-    <div class="carousel-item active">
+    <section class="carousel-item active">
       <div class="row">
         <div class="col-md-4 p-2">
           <div class="card">
@@ -444,10 +497,10 @@
         </div>
 
       </div>
-    </div>
+    </section>
 
     <!-- halaman kedua testimoni -->
-    <div class="carousel-item">
+    <section class="carousel-item">
       <div class="row">
         <div class="col-md-4 p-2">
           <div class="card">
@@ -510,10 +563,10 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- halaman ketiga testimoni -->
-    <div class="carousel-item">
+    <section class="carousel-item">
       <div class="row">
         <div class="col-md-4 p-2">
           <div class="card">
@@ -578,10 +631,9 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
   </div>
-  
-</div>
+</section>
 
           <!-- Footer Section -->
     <footer class="bg-dark1 text-white p-4">
@@ -641,45 +693,74 @@
     <script>
       //Counter Students
       $(document).ready(function(){
-          $({angkaAkhir: $('#counter1').text()}).animate({angkaAkhir: 200}, {
+        let countNum = 200;
+          $({countNum: $('#counter1').text()}).animate({countNum: 200}, {
               duration: 2000, 
               easing: 'linear',
               step: function() {
-                  $('#counter1').text(Math.floor(this.angkaAkhir));
+                  $('#counter1').text(Math.floor(this.countNum));
               },
               complete: function() {
-                  $('#counter1').text(angkaAkhir);
+                  $('#counter1').text(countNum);
               }
           });
       });
       
       //Counter Mentor
       $(document).ready(function(){
-        $({angkaAkhir: $('#counter2').text()}).animate({angkaAkhir: 10}, {
+        let countNum = 10;
+        $({countNum: $('#counter2').text()}).animate({countNum: 10}, {
             duration: 2000,
             easing : 'linear',
             step: function() {
-                $('#counter2').text(Math.floor(this.angkaAkhir));
+                $('#counter2').text(Math.floor(this.countNum));
             },
             complete: function() {
-                $('#counter2').text(angkaAkhir);
+                $('#counter2').text(countNum);
             }
         });
     });
 
     //Counter Class
     $(document).ready(function(){
-      $({angkaAkhir: $('#counter3').text()}).animate({angkaAkhir: 6}, {
+      let countNum = 6;
+      $({countNum: $('#counter3').text()}).animate({countNum: 6}, {
           duration: 2000,
           easing : 'linear',
           step: function() {
-              $('#counter3').text(Math.floor(this.angkaAkhir));
+              $('#counter3').text(Math.floor(this.countNum));
           },
           complete: function() {
-              $('#counter3').text(angkaAkhir);
+              $('#counter3').text(countNum);
           }
       });
   });
+
+  // Set waktu hitung mundur (contoh: 24 jam = 86400 detik)
+  var duration = 86400; // 24 jam dalam detik
+
+  var countdownTimer = setInterval(function() {
+    // Hitung jam, menit, dan detik dari durasi
+    var hours = Math.floor(duration / 3600); // Hitung jam
+    var minutes = Math.floor((duration % 3600) / 60); // Hitung menit
+    var seconds = duration % 60; // Hitung detik
+
+    // Format jam, menit, dan detik agar selalu tampil 2 digit
+    hours = hours < 10 ? "0" + hours : hours;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+
+    // Tampilkan hasil dalam format 24h 60m 60s
+    $("#countdown").text(hours + "h " + minutes + "m " + seconds + "s");
+
+    // Jika durasi habis, hentikan timer
+    if (duration <= 0) {
+      clearInterval(countdownTimer);
+      $("#countdown").text("EXPIRED");
+    }
+
+    duration--; // Kurangi waktu setiap detik
+  }, 1000);
   </script>
 </body>
 </html>
