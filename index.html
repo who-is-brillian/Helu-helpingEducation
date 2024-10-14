@@ -111,15 +111,15 @@
  <div class="position-absolute top-100 start-50 translate-middle text-center z-3 d-flex gap-2">
   <div class="bg-medium-dark color-light px-5 rounded-3 shadow">
     <p class="mb-0">Students</p>
-    <h6 class="display-4">200</h6>
+    <h6 id="counter1" class="display-4">0</h6>
   </div>
   <div class="bg-medium-dark color-light px-5 rounded-3 shadow">
     <p class="mb-0">Mentor</p>
-    <h6 class="display-4">10</h6>
+    <h6 id="counter2" class="display-4">0</h6>
   </div>
   <div class="bg-medium-dark color-light px-5 rounded-3 shadow">
     <p class="mb-0">Class</p>
-    <h6 class="display-4">6</h6>
+    <h6 id="counter3" class="display-4">0</h6>
   </div>
 </div>
 </section>
@@ -635,10 +635,52 @@
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
 
-    <script src="script.js">
+    <script>
+      // Fungsi animasi counter menggunakan jQuery 
+      //Counter Students
+      $(document).ready(function(){
+          $({countNum: $('#counter1').text()}).animate({countNum: 200}, {
+              duration: 2000, // Durasi 2 detik
+              easing: 'linear',
+              step: function() {
+                  $('#counter1').text(Math.floor(this.countNum));
+              },
+              complete: function() {
+                  $('#counter1').text(this.countNum);
+              }
+          });
+      });
       
-    </script>
+      //Counter Mentor
+      $(document).ready(function(){
+        $({countNum: $('#counter2').text()}).animate({countNum: 10}, {
+            duration: 2000, // Durasi 2 detik
+            easing: 'linear',
+            step: function() {
+                $('#counter2').text(Math.floor(this.countNum));
+            },
+            complete: function() {
+                $('#counter2').text(this.countNum);
+            }
+        });
+    });
+
+    //Counter Class
+    $(document).ready(function(){
+      $({countNum: $('#counter3').text()}).animate({countNum: 6}, {
+          duration: 2000, // Durasi 2 detik
+          easing: 'linear',
+          step: function() {
+              $('#counter3').text(Math.floor(this.countNum));
+          },
+          complete: function() {
+              $('#counter3').text(this.countNum);
+          }
+      });
+  });
+  </script>
 </body>
 </html>
