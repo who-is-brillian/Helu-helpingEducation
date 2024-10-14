@@ -12,21 +12,32 @@
     <title>About Us HELU</title>
     <style>
         .parallax {
-            background-image: url('img/bannerAbout.png');
+            background-image: url('img/banner AboutUs.png') ;
             height: 500px;
             background-attachment: fixed; 
-            background-position: center; 
+            background-position: 70% 30%; 
             background-repeat: no-repeat; 
-            background-size: contain; 
-        }
-        .text-overlay {
-            position: absolute;
-            top: 60%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
+            background-size: contain;
         }
         
+        @media only screen and (max-width: 720px) {
+            .parallax{
+                height: 300px;
+                background-size: contain;
+                background-position: 70% 15%;  
+            }
+            .nav-text{
+                display: none;
+            }
+        }
+
+        @media only screen and (max-width: 1200px) {
+            .parallax{
+                height: 300px;
+                background-size: contain;
+                background-position: 70% 10%;  
+            }
+        }
     </style>
     
 </head>
@@ -64,13 +75,7 @@
         </div>
       </nav>
       
-
-      <section class="parallax bg-medium-dark ">
-        <div class="text-overlay position-absolute top-50 mx-auto ">
-            <h1 class="fs-1 fw-bold color-dark">Welcome to About HELU</h1>
-            <p class="fs-4">Mempelajari bahasa Inggris dengan cara yang menyenangkan!</p>
-        </div>
-      </section>
+      <section class="parallax bg-medium-dark "></section>
 
     <!-- About Us Start -->
      <main class="container bg-snow p-5 my-5 rounded-5">
