@@ -639,45 +639,44 @@
     <script src="script.js"></script>
 
     <script>
-      // Fungsi animasi counter menggunakan jQuery 
       //Counter Students
       $(document).ready(function(){
-          $({countNum: $('#counter1').text()}).animate({countNum: 200}, {
-              duration: 2000, // Durasi 2 detik
+          $({angkaAkhir: $('#counter1').text()}).animate({angkaAkhir: 200}, {
+              duration: 2000, 
               easing: 'linear',
               step: function() {
-                  $('#counter1').text(Math.floor(this.countNum));
+                  $('#counter1').text(Math.floor(this.angkaAkhir));
               },
               complete: function() {
-                  $('#counter1').text(this.countNum);
+                  $('#counter1').text(angkaAkhir);
               }
           });
       });
       
       //Counter Mentor
       $(document).ready(function(){
-        $({countNum: $('#counter2').text()}).animate({countNum: 10}, {
-            duration: 2000, // Durasi 2 detik
-            easing: 'linear',
+        $({angkaAkhir: $('#counter2').text()}).animate({angkaAkhir: 10}, {
+            duration: 2000,
+            easing : 'linear',
             step: function() {
-                $('#counter2').text(Math.floor(this.countNum));
+                $('#counter2').text(Math.floor(this.angkaAkhir));
             },
             complete: function() {
-                $('#counter2').text(this.countNum);
+                $('#counter2').text(angkaAkhir);
             }
         });
     });
 
     //Counter Class
     $(document).ready(function(){
-      $({countNum: $('#counter3').text()}).animate({countNum: 6}, {
-          duration: 2000, // Durasi 2 detik
-          easing: 'linear',
+      $({angkaAkhir: $('#counter3').text()}).animate({angkaAkhir: 6}, {
+          duration: 2000,
+          easing : 'linear',
           step: function() {
-              $('#counter3').text(Math.floor(this.countNum));
+              $('#counter3').text(Math.floor(this.angkaAkhir));
           },
           complete: function() {
-              $('#counter3').text(this.countNum);
+              $('#counter3').text(angkaAkhir);
           }
       });
   });
