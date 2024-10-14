@@ -13,22 +13,6 @@
     .counter{
       width: 200px;
     }
-      /* Parallax effect */
-    .parallax-section {
-      height: 100vh;
-      background-attachment: fixed;
-      background-size: cover;
-      background-position: center;
-      position: relative;
-    }
-
-    .parallax-section .carousel-item {
-      height: 100vh;
-    }
-
-    .graduates-count {
-      top: 70%;
-    }
 
     .bg-dark {
       background-color: rgba(0, 0, 0, 0.7);
@@ -58,7 +42,7 @@
 <body>
   <nav class="navbar navbar-expand-lg bg-medium-dark fixed-top px-3 py-2 border-bottom border-2 border-dark ">
     <div class="container-fluid">
-      <img src="img/logoHelu.png" alt="Logo" width="70" class="d-inline-block align-text-top">
+      <img src="img/L1.png" alt="Logo" width="70" class="d-inline-block align-text-top">
       <h1 class="nav-text fs-3 fw-bolder color-dark">Helping Education</h1>
       <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -102,15 +86,15 @@
     <div class="carousel-inner">
 
       <!-- Slide 1 with Parallax -->
-      <div class="carousel-item active" style="background-image: url('img/Banner1.png'); background-size: cover; background-position: center; height: 70vh; background-attachment: fixed;">
+      <div class="parallax carousel-item active" style="background-image: url('img/Banner1.png'); background-size: cover; background-repeat: no-repeat; background-position: center; height: 500px; background-attachment: fixed;">
       </div>
 
       <!-- Slide 2 with Parallax -->
-      <div class="carousel-item" style="background-image: url('img/slide1.png'); background-size: cover; background-position: center; height: 70vh; background-attachment: fixed;"> 
+      <div class="parallax carousel-item" style="background-image: url('img/slide1.png'); background-size: cover; background-repeat: no-repeat; background-position: center; height: 500px; background-attachment: fixed;"> 
       </div>
 
       <!-- Slide 3 with Parallax -->
-      <div class="carousel-item" style="background-image: url('img/Kuc.jpg'); background-size: cover; background-position: center; height: 70vh; background-attachment: fixed;">
+      <div class="parallax carousel-item" style="background-image: url('img/Kuc.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; height: 500px; background-attachment: fixed;">
       </div>
     </div>
 
@@ -300,11 +284,11 @@
 
 <!-- Discount Section -->
 <div class="container my-5">
-  <div class="p-5 bg-light color-dark rounded shadow-lg row gap-3 align-items-center" style="background: linear-gradient(135deg, #7C93C3, #d8c4b6);">
+  <div class="p-5 bg-light color-medium-light rounded shadow-lg row gap-3 align-items-center" style="background: linear-gradient(135deg, #213555, #7C93C3 );">
     <div class="col-12 col-lg-6">
       <h2 class="display-1 fw-bolder">Diskon Kelas</h2>
       <p class="lead font-weight-bold">Pilih kelas Grammar dan kelas TOEFL Preparation dapatkan <span class="text-danger">diskon 20%</span></p>
-      <p class="text-muted mb-4">Tawaran terbatas!</p>
+      <p class="mb-4 color-medium-dark">Tawaran terbatas!</p>
       <ul class="list-unstyled">
         <li class="mb-2">
           <i class="bi bi-check-circle-fill text-success"></i> Akses penuh ke semua materi
@@ -737,13 +721,13 @@
   });
 
   // Set waktu hitung mundur (contoh: 24 jam = 86400 detik)
-  var duration = 86400; // 24 jam dalam detik
+  let duration = 86400; // 24 jam dalam detik
 
-  var countdownTimer = setInterval(function() {
+  let countdownTimer = setInterval(function() {
     // Hitung jam, menit, dan detik dari durasi
-    var hours = Math.floor(duration / 3600); // Hitung jam
-    var minutes = Math.floor((duration % 3600) / 60); // Hitung menit
-    var seconds = duration % 60; // Hitung detik
+    let hours = Math.floor(duration / 3600); // Hitung jam
+    let minutes = Math.floor((duration % 3600) / 60); // Hitung menit
+    let seconds = duration % 60; // Hitung detik
 
     // Format jam, menit, dan detik agar selalu tampil 2 digit
     hours = hours < 10 ? "0" + hours : hours;
