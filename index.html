@@ -23,35 +23,60 @@
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     }
 
-    @media only screen and (max-width: 1200px) {
-      .counter{
-        width: 150px;
-      }
-      .parallax{
-        height: 200px;  
-        background-position: top;
-       }
-       .carousel-inner{
-        height: 200px;
-       }
+    .parallax {
+      background-image: url('img/banner1.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: 70% 25%;
+      height: 500px;
+      background-attachment: fixed;
+    }
+    .container-carousel{
+      height: 460px;
     }
 
-    @media only screen and (max-width: 600px) {
-      .nav-text{
-        display: none
-      }
-      .parallax {
-        height: 100px;
-        background-attachment: scroll;                
-        background-position:top;
-       }
-      .counter{
-        width: 100px;
-      }
-      .carousel-inner{
-        height: 200px;
-       }
+  @media only screen and (max-width: 1200px) {
+    .counter{
+      width: 150px;
     }
+    .parallax{
+      height: 200px;
+      background-position: 70% 8%;
+      height: 420px;
+     }
+     .carousel-inner{
+      height: 450px;
+     }
+     .container-carousel{
+      height: 300px;
+     }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .nav-text{
+      display: none
+    }
+    .parallax {
+      height: 100px;
+      background-attachment: fixed;
+      background-position: 70% 15%;
+      height: 200px;
+     }
+    .counter{
+      width: 100px;
+    }
+    .carousel-inner{
+      height: 250px;
+     }
+     .card-student{
+      width: 100%;
+      align-items: center;
+      justify-content: space-around;
+     }
+  }
+
+
+
 
     </style>
 </head>
@@ -90,7 +115,7 @@
   
 <!-- Carousel Section -->
 <!-- Carousel Section with Parallax Effect -->
-<section class="my-5 position-relative " style="height: 420px;">
+<section class=" container-carousel position-relative" >
   <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -102,15 +127,15 @@
     <div class="carousel-inner">
 
       <!-- Slide 1 with Parallax -->
-      <div class="parallax carousel-item active" style="background-image: url('img/banner1.png'); background-size: contain; background-repeat: no-repeat; background-position: 70% 25%; height: 500px; background-attachment: fixed;">
+      <div class="parallax carousel-item active">
       </div>
 
       <!-- Slide 2 with Parallax -->
-      <div class="parallax carousel-item" style="background-image: url('img/banner1.png'); background-size: contain; background-repeat: no-repeat; background-position: 70% 25%; height: 500px; background-attachment: fixed;"> 
+      <div class="parallax carousel-item"> 
       </div>
 
       <!-- Slide 3 with Parallax -->
-      <div class="parallax carousel-item" style="background-image: url('img/banner1.png'); background-size: contain; background-repeat: no-repeat; background-position: 70% 25%; height: 500px; background-attachment: fixed;">
+      <div class="parallax carousel-item">
       </div>
     </div>
 
@@ -126,8 +151,7 @@
   </div>
 
  <!-- Graduates Count Section, positioned in the middle of the carousel -->
-  <section class="countainer">
- <div class="position-absolute top-100 start-50 translate-middle text-center z-3 d-flex gap-2 bg-dark1 p-2 rounded-3">
+ <div class="card-student position-absolute top-100 start-50 translate-middle text-center z-3 d-flex gap-2 bg-dark1 p-2 rounded-3">
   <div class="counter bg-medium-dark color-light rounded-3 shadow ">
     <p class="fw-bold mb-0">Students</p>
     <h6 id="counter1" class="display-4">0</h6>
@@ -141,7 +165,6 @@
     <h6 id="counter3" class="display-4">0</h6>
   </div>
 </div>
-</section>
 </section>
 
 
