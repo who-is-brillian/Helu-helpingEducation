@@ -47,3 +47,60 @@ body{
     color: #f5efe7 ;
 }
 
+/* Footer */
+footer {
+    background-color: #7c93c3;
+    color: #ffffff;
+    padding: 30px 0;
+
+  }
+
+  .footer p {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  /* Link Styling */
+
+  .footer h5,p {
+    color: #213555 !important;
+  }
+  .footer a {
+    text-decoration: none;
+  }
+
+  .footer a:hover {
+    text-decoration: none;
+    color: #f4f4f4;
+  }
+
+  .footer .footer-column ul li a {
+    color: #213555 !important;
+  }
+
+  .footer .footer-column ul li a:hover {
+    color:  white !important;
+  }
+
+  /* Social Media Icon Hover Effect */
+  .social-links i {
+    transition: transform 0.3s ease;
+  }
+
+  .social-links i:hover {
+    transform: scale(1.2);
+  }
+
+  /* Flexbox Adjustments for Footer */
+  .footer-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  .footer-column {
+    margin-bottom: 2rem;
+  }
+
+

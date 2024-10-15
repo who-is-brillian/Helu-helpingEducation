@@ -21,7 +21,7 @@ $(".btn-signIn").hover(
     }
   );
 
-
+//animasi shake diskon
   $(document).ready(function(){
     function shake() {
       $('#limited-offer').animate({marginLeft: "-10px"}, 100)
