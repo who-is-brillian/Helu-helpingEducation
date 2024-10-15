@@ -29,7 +29,7 @@
       }
       .parallax{
         height: 200px;  
-        background-position: center;
+        background-position: top;
        }
        .carousel-inner{
         height: 200px;
@@ -43,7 +43,7 @@
       .parallax {
         height: 100px;
         background-attachment: scroll;                
-        background-position:center;
+        background-position:top;
        }
       .counter{
         width: 100px;
@@ -78,10 +78,10 @@
             <a class="nav-link fs-5 fw-bold color-light " href="contact.html">Contact Us</a>
           </li>
           <li class="nav-item m-2">
-            <a class="btn bg-light fs-5 border-0 fw-bold rounded-5 color-dark" href="login.html">Sign In</a>
+            <a class="btn-signIn btn bg-light1 fs-5 border-0 fw-bold rounded-5 color-dark" href="login.html">Sign In</a>
           </li>
           <li class="nav-item m-2 ">
-            <a class="btn  bg-dark1 fs-5 border-0 fw-bold rounded-5 color-medium-light" href="signUp.html">Sign Up</a>
+            <a class="btn-signUp btn bg-dark1 fs-5 border-0 fw-bold rounded-5 color-medium-light" href="signUp.html">Sign Up</a>
           </li>
         </ul>
       </div>
@@ -126,8 +126,9 @@
   </div>
 
  <!-- Graduates Count Section, positioned in the middle of the carousel -->
- <div class="position-absolute top-100 start-50 translate-middle text-center z-3 d-flex gap-2">
-  <div class="counter bg-medium-dark color-light rounded-3 shadow">
+  <section class="countainer">
+ <div class="position-absolute top-100 start-50 translate-middle text-center z-3 d-flex gap-2 bg-dark1 p-2 rounded-3">
+  <div class="counter bg-medium-dark color-light rounded-3 shadow ">
     <p class="fw-bold mb-0">Students</p>
     <h6 id="counter1" class="display-4">0</h6>
   </div>
@@ -140,6 +141,7 @@
     <h6 id="counter3" class="display-4">0</h6>
   </div>
 </div>
+</section>
 </section>
 
 
@@ -304,7 +306,7 @@
     <div class="col-12 col-lg-6">
       <h2 class="display-1 fw-bolder">Diskon Kelas</h2>
       <p class="lead font-weight-bold">Pilih kelas Grammar dan kelas TOEFL Preparation dapatkan <span class="text-danger">diskon 20%</span></p>
-      <p class="mb-4 color-medium-dark">Tawaran terbatas!</p>
+      <p class="mb-4 text-danger">Tawaran terbatas!</p>
       <ul class="list-unstyled">
         <li class="mb-2">
           <i class="bi bi-check-circle-fill text-success"></i> Akses penuh ke semua materi
@@ -761,6 +763,28 @@
 
     duration--; // Kurangi waktu setiap detik
   }, 1000);
-  </script>
+
+  $(".btn-signIn").hover(
+    function() {
+      $(this).css('background-color', '#213555');
+      $(this).css('color', '#d8c4b6'); // saat mouse masuk
+    },
+    function() {
+      $(this).css('background-color', '#f5efe7');
+      $(this).css('color', '#213555'); // saat mouse keluar (reset ke warna asli)
+    }
+  ); 
+
+  $(".btn-signUp").hover(
+    function() {
+      $(this).css('background-color', '#f5efe7');
+      $(this).css('color', '#213555'); // saat mouse masuk
+    },
+    function() {
+      $(this).css('background-color', '#213555');
+      $(this).css('color', '#d8c4b6'); // saat mouse keluar (reset ke warna asli)
+    }
+  ); 
+</script>
 </body>
 </html>
