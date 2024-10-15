@@ -50,9 +50,9 @@
      .container-carousel{
       height: 300px;
      }
-     .about-section{
+     /* .about-section{
       flex-direction: column;
-     }
+     } */
   }
 
   @media only screen and (max-width: 600px) {
@@ -175,14 +175,20 @@
 
 <!-- About Us Section -->
 <section class="align-items-center my-4">
-  <h1 class="color-dark text-center py-2 rounded-5 mt-5 fw-bold ">About <span class="color-medium-dark">Us</span></h1>
+  
   <div class="about-section d-flex flex-wrap justify-content-center align-items-center">
     <img src="img/people.png" class="img-fluid col-12 col-md-4 col-lg-6" alt="logo">
-    <p class="col-12 col-md-8 col-lg-6 p-5 text-dark fs-5 rounded-3" style="text-align: justify;">
+    <article class="col-12 col-md-8 col-lg-6">
+      <header>
+        <h1 class="color-dark text-center  fw-bold "">About <span class="color-medium-dark">Us</span></h1>
+      </header>
+      <p class=" py-3 px-5 text-dark fs-5 rounded-3" style="text-align: justify;">
+      
       HELU (Helping Education) adalah platform belajar bahasa Inggris untuk siswa SMA/SMK dengan pendekatan design thinking. Platform ini membantu siswa mempersiapkan ujian masuk perguruan tinggi melalui metode belajar yang interaktif dan menyenangkan.
       HELU menyediakan video pembelajaran, latihan soal, dan forum diskusi yang memudahkan siswa memahami materi. Semua konten dirancang agar belajar lebih menarik dan menjaga motivasi siswa.
       Bekerja sama dengan penerbit, pembuat konten, dan institusi pendidikan, HELU memastikan materi berkualitas dan relevan dengan kebutuhan siswa, mendukung kesuksesan akademik mereka.
-    </p>
+      </p>
+  </article>
   </div>
 </section>
 
@@ -261,7 +267,7 @@
             <h4 class="fw-bold">Basic Plan</h4>
             <h5 class="fw-bold">$29 <small class="text-light">/month</small></h5>
           </div>
-          <div class="card-body text-center">
+          <div class="card-body">
             <p class="card-text">Perfect for beginners looking to improve basic English skills.</p>
             <ul class="list-unstyled">
               <li><i class="bi bi-check-circle-fill text-success"></i> Access to 20 lessons/month</li>
@@ -284,7 +290,7 @@
             <h4 class="fw-bold">Standard Plan</h4>
             <h5 class="fw-bold">$49 <small class="text-light">/month</small></h5>
           </div>
-          <div class="card-body text-center">
+          <div class="card-body">
             <p class="card-text">Ideal for learners wanting more personalized guidance and feedback.</p>
             <ul class="list-unstyled">
               <li><i class="bi bi-check-circle-fill text-success"></i> Access to 50 lessons/month</li>
@@ -307,7 +313,7 @@
             <h4 class="fw-bold">Premium Plan</h4>
             <h5 class="fw-bold">$79 <small class="text-light">/month</small></h5>
           </div>
-          <div class="card-body text-center">
+          <div class="card-body">
             <p class="card-text">The complete experience for learners aiming for fluency and confidence.</p>
             <ul class="list-unstyled">
               <li><i class="bi bi-check-circle-fill text-success"></i> Unlimited lessons</li>
@@ -333,8 +339,8 @@
   <div class="p-5 bg-light color-medium-light rounded shadow-lg row gap-3 align-items-center" style="background: linear-gradient(135deg, #213555, #7C93C3 );">
     <div class="col-12 col-lg-6">
       <h2 class="display-1 fw-bolder">Diskon Kelas</h2>
-      <p class="lead font-weight-bold">Pilih kelas Grammar dan kelas TOEFL Preparation dapatkan <span class="text-danger">diskon 20%</span></p>
-      <p class="mb-4 text-danger">Tawaran terbatas!</p>
+      <p class="lead font-weight-bold">Pilih kelas Grammar dan kelas TOEFL Preparation dapatkan <span class="text-danger fw-bold">diskon 20%</span></p>
+      <p class="mb-4 text-danger fs-3 fw-medium" id="limited-offer">Tawaran terbatas!</p>
       <ul class="list-unstyled">
         <li class="mb-2">
           <i class="bi bi-check-circle-fill text-success"></i> Akses penuh ke semua materi
@@ -461,6 +467,7 @@
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
+  
   <div class="carousel-inner p-5">
     <!-- halaman pertama testimoni -->
     <section class="carousel-item active">

@@ -19,4 +19,18 @@ $(".btn-signIn").hover(
       $(this).css('background-color', '#213555');
       $(this).css('color', '#d8c4b6'); // saat mouse keluar (reset ke warna asli)
     }
-  ); 
+  );
+
+
+  $(document).ready(function(){
+    function shake() {
+      $('#limited-offer').animate({marginLeft: "-10px"}, 100)
+                         .animate({marginLeft: "10px"}, 100)
+                         .animate({marginLeft: "-10px"}, 100)
+                         .animate({marginLeft: "10px"}, 100)
+                         .animate({marginLeft: "0px"}, 100); // Return to original position
+    }
+
+    // Trigger the animation when the page loads
+    setInterval(shake, 500); // Shake every second
+  });
