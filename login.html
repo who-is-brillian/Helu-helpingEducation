@@ -11,83 +11,134 @@
 </head>
 <body class="bg-medium-light">
 
-    <section class="d-flex d-flex align-items-center h-100">
-        <form  class=" mx-auto my-5 p-5 bg-light d-flex flex-column rounded-4 " style="width: 400px;">
-         <img src="img/L1.png" alt="Logo Helu" class="w-50 mx-auto">
-         <h4 class="mx-auto py-2">Login to HELU</h4>
-        <div class="mb-4">
-          <input type="email" placeholder="Email Address" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required name="email">
-        </div>
-        <div class="mb-4">
-          <input type="password" placeholder="Password" class="form-control" id="exampleInputPassword1">
-        </div>
-        <button type="submit" id="loginBtn" class="btn bg-medium-dark color-light btn-hover">Login</button>
-        <p class="mx-auto my-2">Don't have an account? <a href="signUp.html" class="text-decoration-none color-medium-dark">Sign up here</a></p>
-      </form>
+    <section class="d-flex align-items-center h-100">
+        <form class="mx-auto my-5 p-5 bg-light d-flex flex-column rounded-4" style="width: 400px;">
+            <img src="img/L1.png" alt="Logo Helu" class="w-50 mx-auto">
+            <h4 class="mx-auto py-2">Login to HELU</h4>
+            <div class="mb-4">
+                <input type="email" placeholder="Email Address" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required name="email">
+            </div>
+            <div class="mb-4 position-relative">
+                <input type="password" placeholder="Password" class="form-control" id="exampleInputPassword1" required>
+                <i class="bi bi-eye-slash position-absolute end-0 top-50 translate-middle-y pe-3" id="togglePassword" style="cursor: pointer;"></i>
+            </div>
+
+            <button type="submit" id="loginBtn" class="btn bg-medium-dark color-light btn-hover mb-3">Login</button>
+
+            <div class="text-center mb-3">
+                <span>or</span>
+            </div>
+
+            <div class="mb-3 d-grid">
+                <button type="button" class="btn btn-danger" id="googleLoginBtn">
+                    <i class="bi bi-google"></i> Continue with Google
+                </button>
+            </div>
+
+            <div class="mb-3 d-grid">
+                <button type="button" class="btn btn-primary" id="facebookLoginBtn">
+                    <i class="bi bi-facebook"></i> Continue with Facebook
+                </button>
+            </div>
+
+            <p class="mx-auto my-2">Don't have an account? <a href="signUp.html" class="text-decoration-none color-medium-dark">Sign up here</a></p>
+        </form>
     </section>
 
-              <!-- Footer Section -->
-              <footer class="bg-dark1 text-white p-4">
-                <div class="container">
-                    <!-- Awal bagian grid (row) Bootstrap -->
-                    <div class="row">
-                        <!-- Kolom 1: Logo dan Deskripsi -->
-                        <div class="col-md-4 d-flex">
-                            <div class="logo">
-                                <img src="img/logoHelu.png" alt="Helu Logo" class="img-fluid">
-                            </div>
-                            <div class="ms-3">
-                                <h3>Helu</h3>
-                                <p>Helu is an intelligent future education platform for STEAM learning with AI (Artificial Intelligence)
-                                    and AR (Augmented Reality).</p>
-                                <p>PT .....</p>
-                                <p>Alamat....<br>Kota .. Provinsi... Negara ..</p>
-                                
-                            </div>
-                        </div>
-                        <!-- Akhir Kolom 1 -->
-          
-                        <!-- Kolom 2: Quick Links dengan Zoom saat hover -->
-                        <div class="col-md-4 quick-links text-center">
-                            <h3>Quick Links</h3>
-                            <ul class="list-unstyled">
-                                <li><a href="#" class="text-light text-decoration-none">Home</a></li>
-                                <li><a href="#" class="text-light text-decoration-none">About Us</a></li>
-                                <li><a href="#" class="text-light text-decoration-none">Contact Us</a></li>
-                            </ul>
-                        </div>
-                        <!-- Akhir Kolom 2 -->
-          
-                        <!-- Kolom 3: Social Links dengan Zoom pada gambar -->
-                        <div class="col-md-4 social-links">
-                            <h3>Connect With Us</h3>
-                            <ul class="list-unstyled fs-4 fs-4">
-                                <li><i class="bi bi-youtube text-danger" id="youtube"></i><a class="fs-5 text-light text-decoration-none d-none" href="#" id="textYt"> HELU Official</a></li>
-                                <li><i class="bi bi-facebook text-primary" id="facebook"></i><a class="fs-5 text-light text-decoration-none d-none" href="#"  id="textFb"> HELU Official</a></li>
-                                <li><i class="bi bi-linkedin text-primary" id="linkedin"></i><a class="fs-5 text-light text-decoration-none d-none" href="#"  id="textLi"> HELU Official</a></li>
-                                <li><i class="bi bi-whatsapp text-success" id="whatsapp"></i><a class="fs-5 text-light text-decoration-none d-none" href="#"  id="textWa"> +626764653657</a></li>
-                                <li><i class="bi bi-envelope text-light" id="email"></i><a class="fs-5 text-light text-decoration-none d-none" href="#"  id="textEm"> Heluofficial@gmail.com</a></li>
-                                
-                            </ul>
-                            </div>
-                        <!-- Akhir Kolom 3 -->
+    <!-- Footer Section -->
+    <footer class="bg-dark1 text-white p-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 d-flex">
+                    <div class="logo">
+                        <img src="img/logoHelu.png" alt="Helu Logo" class="img-fluid">
                     </div>
-                    <!-- Akhir bagian grid (row) Bootstrap -->
+                    <div class="ms-3">
+                        <h3>Helu</h3>
+                        <p>Helu is an intelligent future education platform for STEAM learning with AI (Artificial Intelligence) and AR (Augmented Reality).</p>
+                        <p>PT .....</p>
+                        <p>Alamat....<br>Kota .. Provinsi... Negara ..</p>
+                    </div>
                 </div>
-            </footer>
+                <div class="col-md-4 quick-links text-center">
+                    <h3>Quick Links</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light text-decoration-none">Home</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">About Us</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 social-links">
+                    <h3>Connect With Us</h3>
+                    <ul class="list-unstyled fs-4">
+                        <li><i class="bi bi-youtube text-danger"></i><a class="fs-5 text-light text-decoration-none" href="#"> HELU Official</a></li>
+                        <li><i class="bi bi-facebook text-primary"></i><a class="fs-5 text-light text-decoration-none" href="#"> HELU Official</a></li>
+                        <li><i class="bi bi-linkedin text-primary"></i><a class="fs-5 text-light text-decoration-none" href="#"> HELU Official</a></li>
+                        <li><i class="bi bi-whatsapp text-success"></i><a class="fs-5 text-light text-decoration-none" href="#"> +626764653657</a></li>
+                        <li><i class="bi bi-envelope text-light"></i><a class="fs-5 text-light text-decoration-none" href="#"> Heluofficial@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-      <script>
-        const loginBtn = document.getElementById('loginBtn')
-        const inputEmail = document.getElementById('exampleInputEmail1')
-
-    loginBtn.addEventListener('click', function(){
-    alert('Selamat anda sudah login')
-    })
-
-      </script>
-      <script src="script.js"></script>
+    <script>
+        const loginBtn = document.getElementById('loginBtn');
+        const inputEmail = document.getElementById('exampleInputEmail1');
+        const passwordInput = document.getElementById('exampleInputPassword1');
+        const togglePassword = document.getElementById('togglePassword');
+        const googleLoginBtn = document.getElementById('googleLoginBtn');
+        const facebookLoginBtn = document.getElementById('facebookLoginBtn');
+    
+        // Fungsi untuk mengarahkan ke index.html
+        function redirectToIndex() {
+            window.location.href = 'index.html';
+        }
+    
+        // Login tombol akan memeriksa input sebelum membawa pengguna ke index.html
+        loginBtn.addEventListener('click', function(event) {
+            event.preventDefault(); // Mencegah pengiriman form
+            
+            // Memeriksa apakah input email dan password telah diisi
+            if (inputEmail.value.trim() === '' || passwordInput.value.trim() === '') {
+                alert('Mohon isi semua kolom yang diperlukan.');
+            } else {
+                // Menyimpan email dan password ke localStorage
+                localStorage.setItem('email', inputEmail.value);
+                localStorage.setItem('password', passwordInput.value);
+    
+                // Menampilkan alert bahwa login berhasil
+                alert('Selamat, Anda berhasil login!');
+    
+                // Arahkan ke index.html
+                redirectToIndex();
+            }
+        });
+    
+        // Toggle password visibility
+        togglePassword.addEventListener('click', function () {
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            this.classList.toggle('bi-eye');
+            this.classList.toggle('bi-eye-slash');
+        });
+    
+        // Redirect to index.html for Google Login
+        googleLoginBtn.addEventListener('click', function() {
+            // Simulasikan login Google dan redirect
+            alert('Anda telah login menggunakan Google!');
+            redirectToIndex();
+        });
+    
+        // Redirect to index.html for Facebook Login
+        facebookLoginBtn.addEventListener('click', function() {
+            // Simulasikan login Facebook dan redirect
+            alert('Anda telah login menggunakan Facebook!');
+            redirectToIndex();
+        });
+    </script>
+    
 </body>
 </html>
