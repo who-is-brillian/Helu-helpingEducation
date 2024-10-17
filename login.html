@@ -91,7 +91,8 @@
             <li><a href="#">Listening</a></li>
             <li><a href="#">Writing</a></li>
             <li><a href="#">Grammar</a></li>
-            <li><a href="#">TOEFL/IELTS Preparation</a></li>
+            <li><a href="#">TOEFL Preparation</a></li>
+            <li><a href="#">IELTS Preparation</a></li>
           </ul>
         </article>
       </div>
@@ -153,62 +154,65 @@
   </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <script>
-        const loginBtn = document.getElementById('loginBtn');
-        const inputEmail = document.getElementById('exampleInputEmail1');
-        const passwordInput = document.getElementById('exampleInputPassword1');
-        const togglePassword = document.getElementById('togglePassword');
-        const googleLoginBtn = document.getElementById('googleLoginBtn');
-        const facebookLoginBtn = document.getElementById('facebookLoginBtn');
-    
+   <script>
+    $(document).ready(function() {
+        const loginBtn = $('#loginBtn');
+        const inputEmail = $('#exampleInputEmail1');
+        const passwordInput = $('#exampleInputPassword1');
+        const togglePassword = $('#togglePassword');
+        const googleLoginBtn = $('#googleLoginBtn');
+        const facebookLoginBtn = $('#facebookLoginBtn');
+
         // Fungsi untuk mengarahkan ke index.html
         function redirectToIndex() {
             window.location.href = 'index.html';
         }
-    
+
         // Login tombol akan memeriksa input sebelum membawa pengguna ke index.html
-        loginBtn.addEventListener('click', function(event) {
+        loginBtn.on('click', function(event) {
             event.preventDefault(); // Mencegah pengiriman form
-            
+
             // Memeriksa apakah input email dan password telah diisi
-            if (inputEmail.value.trim() === '' || passwordInput.value.trim() === '') {
+            if ($.trim(inputEmail.val()) === '' || $.trim(passwordInput.val()) === '') {
                 alert('Mohon isi semua kolom yang diperlukan.');
             } else {
                 // Menyimpan email dan password ke localStorage
-                localStorage.setItem('email', inputEmail.value);
-                localStorage.setItem('password', passwordInput.value);
-    
+                localStorage.setItem('email', inputEmail.val());
+                localStorage.setItem('password', passwordInput.val());
+
                 // Menampilkan alert bahwa login berhasil
                 alert('Selamat, Anda berhasil login!');
-    
+
                 // Arahkan ke index.html
                 redirectToIndex();
             }
         });
-    
+
         // Toggle password visibility
-        togglePassword.addEventListener('click', function () {
-            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-            passwordInput.setAttribute('type', type);
-            this.classList.toggle('bi-eye');
-            this.classList.toggle('bi-eye-slash');
+        togglePassword.on('click', function() {
+            const type = passwordInput.attr('type') === 'password' ? 'text' : 'password';
+            passwordInput.attr('type', type);
+            $(this).toggleClass('bi-eye bi-eye-slash');
         });
-    
+
         // Redirect to index.html for Google Login
-        googleLoginBtn.addEventListener('click', function() {
+        googleLoginBtn.on('click', function() {
             // Simulasikan login Google dan redirect
             alert('Anda telah login menggunakan Google!');
             redirectToIndex();
         });
-    
+
         // Redirect to index.html for Facebook Login
-        facebookLoginBtn.addEventListener('click', function() {
+        facebookLoginBtn.on('click', function() {
             // Simulasikan login Facebook dan redirect
             alert('Anda telah login menggunakan Facebook!');
             redirectToIndex();
         });
-    </script>
+    });
+</script>
+
     
 </body>
 </html>

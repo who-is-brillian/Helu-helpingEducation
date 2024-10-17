@@ -21,6 +21,51 @@ $(".btn-signIn").hover(
     }
   );
 
+//button info selengkapnya
+  $(".btn-info").hover(
+    function() {
+      $(this).css('background-color', '#213555');
+      $(this).css('color', '#f5efe7'); // saat mouse masuk
+    },
+    function() {
+      $(this).css('background-color', '#213555');
+      $(this).css('color', '#f5efe7'); // saat mouse keluar (reset ke warna asli)
+    }
+  );
+
+  //button price
+  $(".btn-price1").hover(
+    function() {
+      $(this).css('background-color', '#7c93c3');
+      $(this).css('color', '#f5efe7'); // saat mouse masuk
+    },
+    function() {
+      $(this).css('background-color', '#7c93c3');
+      $(this).css('color', '#f5efe7'); // saat mouse keluar (reset ke warna asli)
+    }
+  );
+  $(".btn-price2").hover(
+    function() {
+      $(this).css('background-color', '#4f709c');
+      $(this).css('color', '#f5efe7'); // saat mouse masuk
+    },
+    function() {
+      $(this).css('background-color', '#4f709c');
+      $(this).css('color', '#f5efe7'); // saat mouse keluar (reset ke warna asli)
+    }
+  );
+  $(".btn-price3").hover(
+    function() {
+      $(this).css('background-color', '#213555');
+      $(this).css('color', '#f5efe7'); // saat mouse masuk
+    },
+    function() {
+      $(this).css('background-color', '#213555');
+      $(this).css('color', '#f5efe7'); // saat mouse keluar (reset ke warna asli)
+    }
+  );
+  
+
   //Button Daftar sekarang
 $(".btn-daftar").hover(
   function() {

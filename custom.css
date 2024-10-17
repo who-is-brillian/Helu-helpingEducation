@@ -14,6 +14,10 @@ body{
     background-color: #7C93C3;
 }
 
+.bg-medium-dark2 {
+  background-color: #4f709c;
+}
+
 .bg-medium-light {
     background-color: #d8c4b6;
 }
@@ -30,16 +34,15 @@ body{
     color: #213555;
 }
 
-.color-medium-dark {
-    color: #4f709c;
-}
-
 .color-medium-light {
     color: #d8c4b6;
 }
 
 .color-light {
     color: #f5efe7;
+}
+.color-medium-dark {
+  color: #4f709c;
 }
 
 .btn-hover:hover {
