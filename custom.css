@@ -103,4 +103,11 @@ footer {
     margin-bottom: 2rem;
   }
 
+  #hover-pilih-kelas{
+    transition: all 0.3s ease
+  }
+  #hover-pilih-kelas:hover {
+    transform: scale(1.02);
+  }
+  
 
