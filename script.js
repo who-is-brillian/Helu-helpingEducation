@@ -92,3 +92,19 @@ $(".btn-daftar").hover(
     // Trigger the animation when the page loads
     setInterval(shake, 500); // Shake every second
   });
+
+  // Effek mengetik
+  $(document).ready(function() {
+    var text = "WHO WE ARE AND WHY WE DO WHAT WE DO?"; // Teks yang ingin ditampilkan
+    var index = 0;
+
+    function typeEffect() {
+      if (index < text.length) {
+        $('#typing-effect').append(text[index]);
+        index++;
+        setTimeout(typeEffect, 100); // Mengatur kecepatan mengetik (100ms per huruf)
+      }
+    }
+
+    typeEffect(); // Panggil fungsi untuk mulai mengetik
+  });

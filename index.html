@@ -10,31 +10,29 @@
     <title>HELU</title>
     
     <style>
-      /* Add smooth bounce animation to navbar */
-  .bounce {
-    animation: smoothBounceIn 1.2s ease-out; /* Longer duration and easing */
-    opacity: 1; /* Make it visible */
-  }
-      /* Smooth bounce animation */
-  @keyframes smoothBounceIn {
-    0% {
-      transform: translateY(-150px); /* Reduced initial height for smoothness */
-      opacity: 0;
+        /* Add smooth bounce animation to navbar */
+    .bounce {
+      animation: smoothBounceIn 1.2s ease-out; /* Longer duration and easing */
+      opacity: 1; /* Make it visible */
     }
-    60% {
-      transform: translateY(15px); /* Smooth small bounce effect */
-      opacity: 1;
+        /* Smooth bounce animation */
+    @keyframes smoothBounceIn {
+      0% {
+        transform: translateY(-150px); /* Reduced initial height for smoothness */
+        opacity: 0;
+      }
+      60% {
+        transform: translateY(15px); /* Smooth small bounce effect */
+        opacity: 1;
+      }
+      80% {
+        transform: translateY(-5px); /* Gentle bounce up */
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
-    80% {
-      transform: translateY(-5px); /* Gentle bounce up */
-    }
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-
-  
 
     .counter{
       width: 200px;

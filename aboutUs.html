@@ -11,36 +11,36 @@
             <link rel="stylesheet" href="custom.css">
         <title>About Us HELU</title>
         <style>
-            .parallax {
-    background-image: url('img/About Us.png'); /* URL gambar latar belakang */
-    height: 65vh;
-    background-attachment: fixed;
-    background-position: 70% 25%;
-    background-repeat: no-repeat;
-    background-size: contain;
-    display: flex;
-    justify-content: center; /* Memusatkan secara horizontal */
-    align-items: center; /* Memusatkan secara vertikal */
-    position: relative; /* Dibutuhkan untuk penggunaan z-index */
-}
+                .parallax {
+                    background-image: url('img/About Us.png'); /* URL gambar latar belakang */
+                    height: 65vh;
+                    background-attachment: fixed;
+                    background-position: 70% 25%;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    display: flex;
+                    justify-content: center; /* Memusatkan secara horizontal */
+                    align-items: center; /* Memusatkan secara vertikal */
+                    position: relative; /* Dibutuhkan untuk penggunaan z-index */
+                }
 
-.parallax-item {
-    position: absolute; /* Untuk mengatur posisi bebas dalam parallax */
-    top: 37%;
-    left: 30%;
-    transform: translateY(-50%); /* Memastikan elemen tetap di tengah vertikal */
-    z-index: 1; /* Menyebabkan teks ini berada di belakang next-section */
-}
+                .parallax-item {
+                    position: absolute; /* Untuk mengatur posisi bebas dalam parallax */
+                    top: 37%;
+                    left: 30%;
+                    transform: translateY(-50%); /* Memastikan elemen tetap di tengah vertikal */
+                    z-index: 1; /* Menyebabkan teks ini berada di belakang next-section */
+                }
 
-.parallax-item h1 {
-    color: white; /* Warna teks */
-    font-size: 4em; /* Ukuran font */
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: bold;
-    padding: 10px; /* Memberikan padding agar teks tidak terlalu menempel */
-    z-index: inherit; /* Menggunakan z-index dari parent (parallax-item) */
-}
-            
+                .parallax-item h1 {
+                    color: white; /* Warna teks */
+                    font-size: 4em; /* Ukuran font */
+                    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    font-weight: bold;
+                    padding: 10px; /* Memberikan padding agar teks tidak terlalu menempel */
+                    z-index: inherit; /* Menggunakan z-index dari parent (parallax-item) */
+                }
+                            
 
                     
             @media only screen and (max-width: 1200px) {
@@ -115,7 +115,7 @@
         
         <section class="parallax bg-medium-dark ">
             <div class="parallax-item position-fixed">
-                <h1>WHO WE ARE AND WHY WE DO WHAT WE DO?</h1>
+                <h1 id="typing-effect"></h1>
             </div>
         </section>
         
