@@ -10,6 +10,31 @@
     <title>HELU</title>
     
     <style>
+      /* Add smooth bounce animation to navbar */
+  .bounce {
+    animation: smoothBounceIn 1.2s ease-out; /* Longer duration and easing */
+    opacity: 1; /* Make it visible */
+  }
+      /* Smooth bounce animation */
+  @keyframes smoothBounceIn {
+    0% {
+      transform: translateY(-150px); /* Reduced initial height for smoothness */
+      opacity: 0;
+    }
+    60% {
+      transform: translateY(15px); /* Smooth small bounce effect */
+      opacity: 1;
+    }
+    80% {
+      transform: translateY(-5px); /* Gentle bounce up */
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  
 
     .counter{
       width: 200px;
@@ -92,29 +117,29 @@
   <nav class="navbar navbar-expand-lg bg-medium-dark fixed-top px-3 py-2 border-bottom border-2 border-dark ">
     <div class="container-fluid">
       <img src="img/L1.png" alt="Logo" width="70" class="d-inline-block align-text-top">
-      <h1 class="nav-text fs-3 fw-bolder color-dark">Helping Education</h1>
+      <h1 class="nav-text fs-4 fw-bolder color-dark">Helping Education</h1>
       <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto ">
           <li class="nav-item m-2 ">
-            <a class="nav-link active fs-5 fw-bold color-light" aria-current="page" href="index.html">Home</a>
+            <a class="nav-link active color-light" aria-current="page" href="index.html">Home</a>
           </li>
           <li class="nav-item m-2 ">
-            <a class="nav-link fs-5 fw-bold color-light " href="class.html">Class</a>
+            <a class="nav-link color-light " href="class.html">Class</a>
           </li>
           <li class="nav-item m-2 ">
-            <a class="nav-link fs-5 fw-bold color-light " href="aboutUs.html">About Us</a>
+            <a class="nav-link color-light " href="aboutUs.html">About Us</a>
           </li>
           <li class="nav-item m-2 ">
-            <a class="nav-link fs-5 fw-bold color-light " href="contact.html">Contact Us</a>
+            <a class="nav-link color-light " href="contact.html">Contact Us</a>
           </li>
           <li class="nav-item m-2">
-            <a class="btn-signIn btn bg-light1 fs-5 border-0 fw-bold rounded-5 color-dark" href="login.html">Sign In</a>
+            <a class="btn-signIn btn bg-light1 border-0 rounded-5 color-dark" href="login.html">Sign In</a>
           </li>
           <li class="nav-item m-2 ">
-            <a class="btn-signUp btn bg-dark1 fs-5 border-0 fw-bold rounded-5 color-medium-light" href="signUp.html">Sign Up</a>
+            <a class="btn-signUp btn bg-dark1 border-0 rounded-5 color-medium-light" href="signUp.html">Sign Up</a>
           </li>
         </ul>
       </div>
@@ -878,6 +903,13 @@
     <script src="script.js"></script>
 
     <script>
+
+$(document).ready(function () {
+      // When the page is fully loaded, trigger the bounce animation
+      $('.navbar').addClass('bounce');
+    });
+
+
       //Counter Students
       $(document).ready(function(){
         let countNum = 200;

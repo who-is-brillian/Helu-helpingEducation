@@ -12,13 +12,35 @@
         <title>About Us HELU</title>
         <style>
             .parallax {
-                background-image: url('img/About\ Us.png');
-                height: 65vh;
-                background-attachment: fixed;
-                background-position: 70% 25%;
-                background-repeat: no-repeat;
-                background-size: contain;
-            }
+    background-image: url('img/About Us.png'); /* URL gambar latar belakang */
+    height: 65vh;
+    background-attachment: fixed;
+    background-position: 70% 25%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: center; /* Memusatkan secara horizontal */
+    align-items: center; /* Memusatkan secara vertikal */
+    position: relative; /* Dibutuhkan untuk penggunaan z-index */
+}
+
+.parallax-item {
+    position: absolute; /* Untuk mengatur posisi bebas dalam parallax */
+    top: 37%;
+    left: 30%;
+    transform: translateY(-50%); /* Memastikan elemen tetap di tengah vertikal */
+    z-index: 1; /* Menyebabkan teks ini berada di belakang next-section */
+}
+
+.parallax-item h1 {
+    color: white; /* Warna teks */
+    font-size: 4em; /* Ukuran font */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    padding: 10px; /* Memberikan padding agar teks tidak terlalu menempel */
+    z-index: inherit; /* Menggunakan z-index dari parent (parallax-item) */
+}
+            
 
                     
             @media only screen and (max-width: 1200px) {
@@ -58,43 +80,48 @@
         </style>
     </head>
 
-    <body class="bg-light" >
+    <body>
         <nav class="navbar navbar-expand-lg bg-medium-dark fixed-top px-3 py-2 border-bottom border-2 border-dark ">
             <div class="container-fluid">
             <img src="img/L1.png" alt="Logo" width="70" class="d-inline-block align-text-top">
-            <h1 class="nav-text fs-3 fw-bolder color-dark">Helping Education</h1>
+            <h1 class="nav-text fs-4 fw-bolder color-dark">Helping Education</h1>
             <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto ">
                 <li class="nav-item m-2 ">
-                    <a class="nav-link fs-5 fw-bold color-light" aria-current="page" href="index.html">Home</a>
+                    <a class="nav-link color-light" aria-current="page" href="index.html">Home</a>
                 </li>
                 <li class="nav-item m-2 ">
-                    <a class="nav-link fs-5 fw-bold color-light " href="class.html">Class</a>
+                    <a class="nav-link color-light " href="class.html">Class</a>
                 </li>
                 <li class="nav-item m-2 ">
-                    <a class="nav-link active fs-5 fw-bold color-light " href="aboutUs.html">About Us</a>
+                    <a class="nav-link active color-light " href="aboutUs.html">About Us</a>
                 </li>
                 <li class="nav-item m-2 ">
-                    <a class="nav-link fs-5 fw-bold color-light " href="contact.html">Contact Us</a>
+                    <a class="nav-link color-light " href="contact.html">Contact Us</a>
                 </li>
                 <li class="nav-item m-2">
-                    <a class="btn-signIn btn bg-light1 fs-5 border-0 fw-bold rounded-5 color-dark" href="login.html">Sign In</a>
+                    <a class="btn-signIn btn bg-light1  border- rounded-5 color-dark" href="login.html">Sign In</a>
                 </li>
                 <li class="nav-item m-2 ">
-                    <a class="btn-signUp btn  bg-dark1 fs-5 border-0 fw-bold rounded-5 color-medium-light" href="signUp.html">Sign Up</a>
+                    <a class="btn-signUp btn  bg-dark1  border- rounded-5 color-medium-light" href="signUp.html">Sign Up</a>
                 </li>
                 </ul>
             </div>
             </div>
         </nav>
         
-        <section class="parallax bg-medium-dark "></section>
-
+        <section class="parallax bg-medium-dark ">
+            <div class="parallax-item position-fixed">
+                <h1>WHO WE ARE AND WHY WE DO WHAT WE DO?</h1>
+            </div>
+        </section>
+        
+        <main class="z-2 position-relative">
         <!-- About Us Start -->
-        <main class="container bg-snow p-5 my-5 rounded-5">
+        <section class="container bg-snow p-5 my-5 rounded-5">
             <!-- About Helu -->
         <section class="mt-5" >
             <h1 class="text-center my-5 fw-bolder color-medium-dark">About <span class="color-dark">HELU</span></h1>
@@ -299,7 +326,7 @@
                 </button>
             </div>
         </section>
-    </main>
+    </section>
         <!-- About Us End -->
 
                  <!-- Footer Section -->
@@ -409,6 +436,7 @@
   <section class="container-fluid text-center bg-light">
     <p class="mb-0">&copy; 2024 kelompok8. All Rights Reserved.</p>
   </section>
+</main>
 
         <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
