@@ -23,7 +23,7 @@ $(".btn-signIn").hover(
   );
 
 //button info selengkapnya
-  $(".btn-info").hover(
+  $(".btn-class-info").hover(
     function() {
       $(this).css('background-color', '#213555');
       $(this).css('color', '#f5efe7'); // saat mouse masuk
@@ -39,30 +39,40 @@ $(".btn-signIn").hover(
     function() {
       $(this).css('background-color', '#7c93c3');
       $(this).css('color', '#f5efe7'); // saat mouse masuk
+      $(this).css('scale', '1.05')
+      $(this).css('transition','0.5s')
     },
     function() {
       $(this).css('background-color', '#7c93c3');
       $(this).css('color', '#f5efe7'); // saat mouse keluar (reset ke warna asli)
+      $(this).css('scale', '1')
     }
   );
   $(".btn-price2").hover(
     function() {
       $(this).css('background-color', '#4f709c');
       $(this).css('color', '#f5efe7'); // saat mouse masuk
+      $(this).css('scale', '1.05')
+      $(this).css('transition','0.5s')
+
     },
     function() {
       $(this).css('background-color', '#4f709c');
       $(this).css('color', '#f5efe7'); // saat mouse keluar (reset ke warna asli)
+      $(this).css('scale', '1')
     }
   );
   $(".btn-price3").hover(
     function() {
       $(this).css('background-color', '#213555');
       $(this).css('color', '#f5efe7'); // saat mouse masuk
+      $(this).css('scale', '1.05')
+      $(this).css('transition','0.5s')
     },
     function() {
       $(this).css('background-color', '#213555');
       $(this).css('color', '#f5efe7'); // saat mouse keluar (reset ke warna asli)
+      $(this).css('scale', '1')
     }
   );
   
@@ -93,18 +103,26 @@ $(".btn-daftar").hover(
     setInterval(shake, 500); // Shake every second
   });
 
-  // Effek mengetik
+  // typing effect
   $(document).ready(function() {
-    var text = "WHO WE ARE AND WHY WE DO WHAT WE DO?"; // Teks yang ingin ditampilkan
-    var index = 0;
+    var texts = [
+      "WHO WE ARE AND WHY WE DO WHAT WE DO?",
+      "WE ARE PASSIONATE ABOUT CREATING IMPACTFUL EXPERIENCES.",
+      "FEEL FREE TO REACH OUT FOR ANY PROJECT INQUIRIES."
+    ];
 
-    function typeEffect() {
+    // Fungsi untuk membuat efek mengetik
+    function typeEffect(element, text, index = 0) {
       if (index < text.length) {
-        $('#typing-effect').append(text[index]);
-        index++;
-        setTimeout(typeEffect, 100); // Mengatur kecepatan mengetik (100ms per huruf)
+        element.append(text[index]); // Tambahkan karakter satu per satu
+        setTimeout(function() {
+          typeEffect(element, text, index + 1); // Lanjutkan mengetik
+        }, 80); // Kecepatan mengetik (100ms per huruf)
       }
     }
 
-    typeEffect(); // Panggil fungsi untuk mulai mengetik
+    // Panggil efek mengetik untuk setiap elemen
+    typeEffect($('.typing-effect1'), texts[0]);
+      typeEffect($('.typing-effect2'), texts[1]);
+      typeEffect($('.typing-effect3'), texts[2]);
   });

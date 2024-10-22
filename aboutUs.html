@@ -34,7 +34,7 @@
 
                 .parallax-item h1 {
                     color: white; /* Warna teks */
-                    font-size: 4em; /* Ukuran font */
+                    font-size: 4.5em;
                     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
                     font-weight: bold;
                     padding: 10px; /* Memberikan padding agar teks tidak terlalu menempel */
@@ -48,6 +48,16 @@
                     height: 50vh;  
                     background-position: 70% 20%;
                     background-size: contain;
+                }
+                .parallax-item {
+                    position: absolute; /* Untuk mengatur posisi bebas dalam parallax */
+                    top: 25%;
+                    left: 30%;
+                    transform: translateY(-50%); /* Memastikan elemen tetap di tengah vertikal */
+                    z-index: 1; /* Menyebabkan teks ini berada di belakang next-section */
+                }
+                .parallax-item h1{
+                    font-size: 3em;
                 }
                 .img-visi-misi {
                     display: block;
@@ -67,6 +77,9 @@
                     height: 40vh; /* Atur ulang ketinggian untuk layar kecil */
                     background-attachment: fixed;                
                     background-position: 70% 22%;
+                }
+                .parallax-item h1{
+                    font-size: 1.5em;
                 }
                 .nav-text {
                     display: none;
@@ -115,7 +128,7 @@
         
         <section class="parallax bg-medium-dark ">
             <div class="parallax-item position-fixed">
-                <h1 id="typing-effect"></h1>
+                <h1 class="typing-effect1"></h1>
             </div>
         </section>
         

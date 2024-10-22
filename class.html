@@ -43,6 +43,15 @@
             padding: 10px; /* Memberikan padding agar teks tidak terlalu menempel */
             z-index: inherit; /* Menggunakan z-index dari parent (parallax-item) */
         }
+        .card {
+          box-shadow: 5px 9px 18px -2px rgba(156,156,156,0.64);
+          transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1);
+            box-shadow: 0 8px 16px rgba(52, 78, 170, 0.2);
+        }
                 
         @media only screen and (max-width: 1200px) {
             .parallax {
@@ -61,16 +70,6 @@
             .nav-text {
                 display: none;
             }
-        }
-
-        .card {
-            box-shadow: 5px 9px 18px -2px rgba(156,156,156,0.64);
-            transition: all 0.3s ease;
-        }
-
-        .card:hover {
-            transform: scale(1);
-            box-shadow: 0 8px 16px rgba(52, 78, 170, 0.2);
         }
 
 
@@ -113,9 +112,10 @@
     
   <section class="parallax bg-medium-dark ">
     <div class="parallax-item position-fixed">
-        <h1 id="typing-effect"></h1>
+        <h1 class="typing-effect2"></h1>
     </div>
-  </section>
+</section>
+
 <main class="position-relative z-2">
     <!-- Class -->
 <section id="classes" class="py-5 bg-light ">
@@ -123,9 +123,11 @@
     <h2 class="text-center fw-bold mb-5 color-dark">Our <span class="color-medium-dark">Classes</span></h2>
     <div class="row ">
       <!-- Class 1 -->
-      <div class="col-lg-3 col-md-6 mb-4 " id="hover-pilih-kelas">
-        <div class="card h-100 text-center">
-          <img src="img/reading.png" class="card-img-top" alt="Class 1">
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100 text-center" id="hover-pilih-kelas">
+          <div class="overflow-hidden">
+            <img src="img/reading.png" class="card-img-top" alt="Class 1">
+          </div>
           <div class="card-body  bg-light">
             <h4 class="card-title">Class Reading</h4>
             <h4 class="color-medium-dark fw-bold">Rp 200.000</h4>
@@ -135,7 +137,7 @@
               <li><i class="bi bi-check-circle-fill"></i> Level: Pemula (Minimal Pelajar SMP)</li>
               <li><i class="bi bi-check-circle-fill"></i> Jam belajar fleksibel</li>
             </ul>            
-            <a href="#" class=" btn-info btn bg-dark1 text-light"> Info Selanjutnya</a>
+            <a href="#" class=" btn-class-info btn bg-dark1 text-light"> Info Selanjutnya</a>
           </div>
           <div class="card-footer text-muted">
             Pendaftaran ditutup kapan saja jika kuota sudah penuh
@@ -144,11 +146,12 @@
       </div>
 
       <!-- Class 2 -->
-      <div class="col-lg-3 col-md-6 mb-4" id="hover-pilih-kelas">
-        <div class="card h-auto text-center ">
-          <img src="img/grammar.png" class="card-img-top" alt="Class 2">
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100 text-center" id="hover-pilih-kelas">
+          <div class="overflow-hidden">
+            <img src="img/grammar.png" class="card-img-top" alt="Class 2">
+          </div>
           <div class="card-body bg-light">
-            
             <h4 class="card-title">Class Grammar</h4>
             <h4 class="color-medium-dark fw-bold">Rp 200.000</h4>
             <ul class="list-unstyled text-start"> 
@@ -157,7 +160,7 @@
               <li><i class="bi bi-check-circle-fill"></i> Level: Pemula (Minimal Pelajar SMP)</li>
               <li><i class="bi bi-check-circle-fill"></i> Jam belajar fleksibel</li>
             </ul>            
-            <a href="#" class=" btn-info btn bg-dark1 text-light"> Info Selanjutnya</a>
+            <a href="#" class=" btn-class-info btn bg-dark1 text-light"> Info Selanjutnya</a>
           </div>
           <div class="card-footer text-muted">
             Pendaftaran ditutup kapan saja jika kuota sudah penuh
@@ -166,9 +169,11 @@
       </div>
 
       <!-- Class 3 -->
-      <div class="col-lg-3 col-md-6 mb-4" id="hover-pilih-kelas">
-        <div class="card h-100 text-center ">
-          <img src="img/writing.png" class="card-img-top" alt="Class 2">
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100 text-center" id="hover-pilih-kelas">
+          <div class="overflow-hidden">
+            <img src="img/writing.png" class="card-img-top" alt="Class 3">
+          </div>
           <div class="card-body bg-light">
             <h4 class="card-title">Class Writing</h4>
             <h4 class="color-medium-dark fw-bold">Rp 200.000</h4>
@@ -178,7 +183,7 @@
               <li><i class="bi bi-check-circle-fill"></i> Level: Pemula (Minimal Pelajar SMP)</li>
               <li><i class="bi bi-check-circle-fill"></i> Jam belajar fleksibel</li>
             </ul>            
-            <a href="#" class=" btn-info btn bg-dark1 text-light"> Info Selanjutnya</a>
+            <a href="#" class=" btn-class-info btn bg-dark1 text-light"> Info Selanjutnya</a>
           </div>
           <div class="card-footer text-muted">
             Pendaftaran ditutup kapan saja jika kuota sudah penuh
@@ -187,9 +192,11 @@
       </div>
 
       <!-- Class 4 -->
-      <div class="col-lg-3 col-md-6 mb-4" id="hover-pilih-kelas">
-        <div class="card h-100 text-center">
-          <img src="img/listening.png" class="card-img-top" alt="Class 3">
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100 text-center" id="hover-pilih-kelas">
+          <div class="overflow-hidden">
+            <img src="img/listening.png" class="card-img-top" alt="Class 4">
+          </div>
           <div class="card-body bg-light">
             <h4 class="card-title">Class Listening</h4>
             <h4 class="color-medium-dark">Rp 200.000</h4>
@@ -199,17 +206,19 @@
               <li><i class="bi bi-check-circle-fill"></i> Level: Pemula (Minimal Pelajar SMP)</li>
               <li><i class="bi bi-check-circle-fill"></i> Jam belajar fleksibel</li>
             </ul>            
-            <a href="#" class=" btn-info btn bg-dark1 text-light"> Info Selanjutnya</a>
+            <a href="#" class=" btn-class-info btn bg-dark1 text-light"> Info Selanjutnya</a>
           </div>
           <div class="card-footer text-muted">
             Pendaftaran ditutup kapan saja jika kuota sudah penuh
           </div>
         </div>
       </div>
-       <!-- Class 4 -->
-       <div class="col-lg-4 col-md-6 mb-4 " id="hover-pilih-kelas">
-        <div class="card h-100 text-center">
-          <img src="img/speaking.png" class="card-img-top" alt="Class 3">
+       <!-- Class 5 -->
+       <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100 text-center" id="hover-pilih-kelas">
+          <div class="overflow-hidden">
+            <img src="img/speaking.png" class="card-img-top" alt="Class 4">
+          </div>
           <div class="card-body bg-light">
             <h4 class="card-title">Class Speaking</h4>
             <h4 class="color-medium-dark">Rp 200.000</h4>
@@ -219,7 +228,7 @@
               <li><i class="bi bi-check-circle-fill"></i> Level: Pemula (Minimal Pelajar SMP)</li>
               <li><i class="bi bi-check-circle-fill"></i> Jam belajar fleksibel</li>
             </ul>            
-            <a href="#" class=" btn-info btn bg-dark1 text-light"> Info Selanjutnya</a>
+            <a href="#" class=" btn-class-info btn bg-dark1 text-light"> Info Selanjutnya</a>
           </div>
           <div class="card-footer text-muted">
             Pendaftaran ditutup kapan saja jika kuota sudah penuh
@@ -227,10 +236,12 @@
         </div>
       </div>
 
-      <!-- Class 5 -->
-      <div class="col-lg-4 col-md-6 mb-4" id="hover-pilih-kelas">
-        <div class="card h-100 text-center">
-          <img src="img/toefl.png" class="card-img-top" alt="Class 4">
+      <!-- Class 5-->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100 text-center" id="hover-pilih-kelas">
+          <div class="overflow-hidden">
+            <img src="img/toefl.png" class="card-img-top" alt="Class 5">
+          </div>
           <div class="card-body bg-light">
             <h4 class="card-title">TOEFL Preparation</h4>
             <h4 class="color-medium-dark">Rp 200.000</h4>
@@ -240,7 +251,7 @@
               <li><i class="bi bi-check-circle-fill"></i> Level: Pemula (Minimal Pelajar SMP)</li>
               <li><i class="bi bi-check-circle-fill"></i> Jam belajar fleksibel</li>
             </ul>            
-            <a href="#" class="btn-info btn bg-dark1 text-light"> Info Selanjutnya</a>
+            <a href="#" class="btn-class-info btn bg-dark1 text-light"> Info Selanjutnya</a>
           </div>
           <div class="card-footer text-muted">
             Pendaftaran ditutup kapan saja jika kuota sudah penuh
@@ -249,9 +260,11 @@
     </div>
 
     <!-- class 6 -->
-    <div class="col-lg-4 col-md-6 mb-4" id="hover-pilih-kelas">
-      <div class="card h-100 text-center">
-        <img src="img/ielts.png" class="card-img-top" alt="Class 4">
+    <div class="col-lg-4 col-md-6 mb-4">
+      <div class="card h-100 text-center" id="hover-pilih-kelas">
+        <div class="overflow-hidden">
+          <img src="img/ielts.png" class="card-img-top" alt="Class 6">
+        </div>
         <div class="card-body bg-light">
           <h4 class="card-title">IELTS Preparation</h4>
           <h4 class="color-medium-dark">Rp 200.000</h4>
@@ -261,7 +274,7 @@
             <li><i class="bi bi-check-circle-fill"></i> Level: Pemula (Minimal Pelajar SMP)</li>
             <li><i class="bi bi-check-circle-fill"></i> Jam belajar fleksibel</li>
           </ul>            
-          <a href="#" class="btn-info btn bg-dark1 text-light"> Info Selanjutnya</a>
+          <a href="#" class="btn-class-info btn bg-dark1 text-light"> Info Selanjutnya</a>
         </div>
         <div class="card-footer text-muted">
           Pendaftaran ditutup kapan saja jika kuota sudah penuh
